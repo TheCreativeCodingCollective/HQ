@@ -1,7 +1,8 @@
-/***** Dependencies ********/
+/**** Dependencies ********/
 const express = require('express');
 const env = require('dotenv').config();
 const path = require('path');
+const bodyParser = require('body-parser');
 
 /******* Global Variables *********/
 const app = express();
@@ -9,7 +10,8 @@ const PORT = process.env.PORT;
 const frontend = __dirname + '/../frontend/'
 
 /******** Middleware **********/
-app.use(express.static('../frontend'))
+app.use(express.static('../frontend'));
+app.use(bodyParser.urlencoded({extended:true}));
 
 
 /******** Routing *******/
@@ -21,6 +23,11 @@ app.route('/')
 app.route('/gallery')
 .get((req, res)=>{
   res.sendFile( path.resolve(frontend + 'gallery.html') );
+});
+
+app.route('/forum')
+.get((req, res)=>{
+  res.sendFile( path.resolve(frontend + 'forum.html') )
 });
 
 /****** Listening on port ******/
