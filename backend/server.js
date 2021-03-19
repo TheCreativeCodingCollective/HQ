@@ -28,8 +28,17 @@ app.route('/gallery')
 app.route('/forum')
 .get((req, res)=>{
   res.sendFile( path.resolve(frontend + 'forum.html') )
-});
+})
+.post((req, res)=>{
+  name = req.body.Name;
+  console.log(name);
+  res.send('submited')
+});;
 
+app.route('/news')
+.get((req, res)=>{
+  res.sendFile( path.resolve(frontend + 'news.html') )
+});
 /****** Listening on port ******/
 app.listen(PORT, ()=>{
   console.log('Listening on ' + PORT);

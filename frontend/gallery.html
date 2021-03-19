@@ -14,7 +14,7 @@
 =======
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Gallery</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,7 +39,7 @@ body {font-family: "Lato", sans-serif}
     <a href="gallery.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>Gallery</b></a>
     <a href="oppurtunities.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>Apply</b></a>
         <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" style="font-family: basic-sans, sans-serif;" title="More"></br></br></br>Hub<i class="fa fa-caret-down"></i></button>     
+      <button class="w3-padding-large w3-button" style="font-family: basic-sans, sans-serif;" title="More"></br></br></br>Hub<i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="#" class="w3-bar-item w3-button">Members</a>
         <a href="#" class="w3-bar-item w3-button">Projects</a>
@@ -49,7 +49,7 @@ body {font-family: "Lato", sans-serif}
     </div>
 
     </div>
-   
+
   </div>
 </div>
 
@@ -73,7 +73,7 @@ body {font-family: "Lato", sans-serif}
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="profiles.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
     </div>
   </div>
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
@@ -131,8 +131,8 @@ body {font-family: "Lato", sans-serif}
   <!-- Ticket Modal -->
   <div id="ticketModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal').style.display='none'"
        class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
         <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
       </header>
@@ -175,7 +175,7 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>
-  
+
 <!-- End Page Content -->
 </div>
 
@@ -202,12 +202,12 @@ function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
   myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -215,7 +215,7 @@ function myFunction() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-  } else { 
+  } else {
     x.className = x.className.replace(" w3-show", "");
   }
 }
