@@ -8,9 +8,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="navStyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+
+
+#logo {
+  height: 100px;
+  width: 300px;
+  bottom: 20px;
+  transition: width 1s, height 1s;
+}
+
+#logo:hover {
+  width: 150px;
+  height: 50px;
+}
 </style>
 <body style="background-color: gold;">
 
@@ -18,7 +34,7 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div style="background-color: #003366; height: 100px;">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <img src="images/image.png" style="height: 100px;width: 300px; bottom: 20px;" id="logo" id="navbar">
+    <img src="images/image.png" class="center" id="logo" id="navbar">
     <div style="float:right;">
     <a href="index.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large"> </br></br></br><b>Home</b></a>
     <a href="news.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>News</b></a>
