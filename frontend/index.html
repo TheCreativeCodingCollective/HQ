@@ -15,7 +15,41 @@
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 
+#navbar {
+  overflow: hidden;
+  background-color: #003366;
+  padding: 10px 10px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 100px;
+}
+#navbar #logo {
+  font-size: 100px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+#navbar_a {
+  float: left;
+  color: black;
+  text-align: center;
+  margin-top: -40px;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+#navbar_a:hover {
+  background-color: grey;
 
+}
+}
+#navbar-right {
+  float: right;
+}
+/* the animation */
 #logo {
   height: 100px;
   width: 300px;
@@ -32,17 +66,17 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div style="background-color: #003366; height: 100px;">
+  <div style="background-color: #003366; height: 100px;" id="navbar">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <img src="images/image.png" class="center" id="logo" id="navbar">
+    <img src="images/image.png" id="logo" id="navbar">
     <div style="float:right;">
-    <a href="index.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large"> </br></br></br><b>Home</b></a>
-    <a href="news.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>News</b></a>
-    <a href="gallery.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>Gallery</b></a>
-    <a href="opportunities.html" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>Apply</b></a>
+    <a href="index.html" style="font-family: basic-sans, sans-serif;" id="navbar_a" class="active"> </br></br></br><b>Home</b></a>
+    <a href="news.html" style="font-family: basic-sans, sans-serif;"  id="navbar_a"></br></br></br><b>News</b></a>
+    <a href="gallery.html" style="font-family: basic-sans, sans-serif;"  id="navbar_a"></br></br></br><b>Gallery</b></a>
+    <a href="opportunities.html" style="font-family: basic-sans, sans-serif;" id="navbar_a"></br></br></br><b>Apply</b></a>
         <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" style="font-family: basic-sans, sans-serif;" title="More"></br></br></br>Hub<i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <button style="font-family: basic-sans, sans-serif;" title="More" id="navbar_a"></br></br></br>Hub<i id="navbar_a"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4" >
         <a href="#" class="w3-bar-item w3-button">Members</a>
         <a href="#" class="w3-bar-item w3-button">Projects</a>
         <a href="#" class="w3-bar-item w3-button">Apply</a>
@@ -67,8 +101,9 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
+</br>
   <div class="mySlides w3-display-container w3-center">
-    <img src="images/profiles.jpg" style="width:100%" alt="Hackerthon">
+    <img src="images/profiles.jpg" style="width:100%;" alt="Hackerthon">
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="images/profiles.jpg" style="width:100%">
@@ -225,6 +260,24 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// whhen the user scrolls it will activate the shrinkage of the logo and Navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("logo").style.height = "50px";
+    document.getElementById("logo").style.width = "150px";
+  } else {
+    document.getElementById("navbar").style.padding = "115px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("logo").style.height = "100px";
+    document.getElementById("logo").style.width = "300px";
+  }
+}
+
 </script>
 
 </body>
