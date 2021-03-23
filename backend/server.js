@@ -30,8 +30,10 @@ app.route('/forum')
   res.sendFile( path.resolve(frontend + 'forum.html') )
 })
 .post((req, res)=>{
-  name = req.body.Name;
-  console.log(name);
+  var user = {name:req.body.Name,
+    email:req.body.Email,
+    message:req.res.Message}
+    
   res.send('submited')
 });;
 
@@ -39,6 +41,7 @@ app.route('/news')
 .get((req, res)=>{
   res.sendFile( path.resolve(frontend + 'news.html') )
 });
+
 /****** Listening on port ******/
 app.listen(PORT, ()=>{
   console.log('Listening on ' + PORT);
