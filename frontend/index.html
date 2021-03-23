@@ -18,7 +18,7 @@ body {font-family: "Lato", sans-serif}
 #navbar {
   overflow: hidden;
   background-color: #003366;
-  padding: 10px 10px; /* Large padding which will shrink on scroll (using JS) */
+  padding: : 115px 10px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
   width: 100%;
@@ -28,38 +28,41 @@ body {font-family: "Lato", sans-serif}
 #navbar #logo {
   font-size: 100px;
   font-weight: bold;
-  transition: 0.4s;
+  transition: 0.3s;
 }
-#navbar_a {
+#navbar a {
   float: left;
   color: black;
+  background-color: white;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -35px;
   padding: 12px;
   text-decoration: none;
+  transition: 0.1s;
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
 }
-#navbar_a:hover {
-  background-color: grey;
+#navbar a:hover {
+  background-color: lightgrey;
 
 }
+/* Style the active/current link */
+#navbar a.active {
+  background-color: gold;
+  color: white;
 }
 #navbar-right {
   float: right;
 }
 /* the animation */
 #logo {
-  height: 100px;
-  width: 300px;
+  height: 150px;
+  width: 450px;
   bottom: 20px;
-  transition: width 1s, height 1s;
-}
-
-#logo:hover {
-  width: 150px;
-  height: 50px;
+  margin-left: 39%;
+  margin-top: -50px;
+  transition: width 1s, height 0.4s, margin 0.6s;
 }
 </style>
 <body style="background-color: gold;">
@@ -70,13 +73,13 @@ body {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <img src="images/image.png" id="logo" id="navbar">
     <div style="float:right;">
-    <a href="index.html" style="font-family: basic-sans, sans-serif;" id="navbar_a" class="active"> </br></br></br><b>Home</b></a>
-    <a href="news.html" style="font-family: basic-sans, sans-serif;"  id="navbar_a"></br></br></br><b>News</b></a>
-    <a href="gallery.html" style="font-family: basic-sans, sans-serif;"  id="navbar_a"></br></br></br><b>Gallery</b></a>
-    <a href="opportunities.html" style="font-family: basic-sans, sans-serif;" id="navbar_a"></br></br></br><b>Apply</b></a>
-        <div class="w3-dropdown-hover w3-hide-small">
-      <button style="font-family: basic-sans, sans-serif;" title="More" id="navbar_a"></br></br></br>Hub<i id="navbar_a"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4" >
+    <a href="index.html" style="font-family: basic-sans, sans-serif;" class="active"><b>Home</b></a>
+    <a href="news.html" style="font-family: basic-sans, sans-serif;"><b>News</b></a>
+    <a href="gallery.html" style="font-family: basic-sans, sans-serif;"><b>Gallery</b></a>
+    <a href="opportunities.html" style="font-family: basic-sans, sans-serif;" ><b>Apply</b></a>
+        <div class="w3-dropdown-hover w3-hide-small" style="background-color: #003366;">
+      <button style="font-family: basic-sans, sans-serif;" >Hub<i ></i></button>
+      <div style="position: fixed;" class="w3-dropdown-content w3-bar-block w3-card-4" >
         <a href="#" class="w3-bar-item w3-button">Members</a>
         <a href="#" class="w3-bar-item w3-button">Projects</a>
         <a href="#" class="w3-bar-item w3-button">Apply</a>
@@ -268,15 +271,20 @@ function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navbar").style.padding = "30px 10px";
     document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("logo").style.marginTop = "-2px"
+    document.getElementById("logo").style.marginLeft = "0%"
     document.getElementById("logo").style.height = "50px";
     document.getElementById("logo").style.width = "150px";
   } else {
     document.getElementById("navbar").style.padding = "115px 10px";
     document.getElementById("logo").style.fontSize = "35px";
-    document.getElementById("logo").style.height = "100px";
-    document.getElementById("logo").style.width = "300px";
+    document.getElementById("logo").style.marginTop = "-60px"
+    document.getElementById("logo").style.marginLeft = "38%"
+    document.getElementById("logo").style.height = "150px";
+    document.getElementById("logo").style.width = "450px";
   }
 }
+
 
 </script>
 
