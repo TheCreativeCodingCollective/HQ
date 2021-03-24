@@ -1,148 +1,222 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="CSS/styles.css">
-<link rel="stylesheet" href="CSS/navStyle.css">
+    <head>
+      <meta charset="UTF-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
+      <!--Bootstrap-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="CSS/bootstrap-responsive.css">
+      <link rel="stylesheet" href="CSS/bootstrap.css">
+      
+      <!--Stylesheets-->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/styles.css">
+      <link rel="stylesheet" href="navStyle.css">
+      
+      <!--Icon-->
+      <link rel="icon" href="Images/icon.png">
+      
+      <style>
+        #trial:hover {
+            background-color: #00004d;
+            
+        }
+        #trial {
+            background-color: #003366;
+        }
+  
+       
+        .container-fluid{
+         padding: 0;
+         min-width: 100%;
+        }
 
- <!--Bootstrap-->
-<script src="bootstrap/bootstrap.min.js"></script>
-<script src="bootstrap/bootstrap.js"></script>
-<link rel="stylesheet" href="CSS/bootstrap.css">
-<link rel="stylesheet" href="CSS/bootstrap.min.css">
-<link rel="stylesheet" href="CSS/bootstrap-responsive.css">
-<link rel="stylesheet" href="CSS/bootstrap-responsive.min.css">
+        .container {
+         padding: 0;
+        }
 
- <!--Icon-->
- <link rel="icon" href="Images/icon.png">
- 
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
+        body {
+         background-image: url("Images/clockHouse.jpg");
+         background-repeat: no-repeat;
+        }
 
-  <body style="background-color: gold;">
+        #navbar {
+         overflow: hidden;
+         background-color: #003366;
+         padding: 115px 10px; /* Large padding which will shrink on scroll (using JS) */
+         transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+         position: fixed; /* Sticky/fixed navbar */
+         width: 100%;
+         top: 0; /* At the top */
+         z-index: 999;
+         height: 60px;
+        }
+     
+        #navbar #logo {
+         font-size: 100px;
+         font-weight: bold;
+         transition: 0.3s;
+        }
+      
+        #navbar_a {
+         float: left;
+         color: black;
+         background-color: white;
+         text-align: center;
+         margin-top: -35px;
+         padding: 12px;
+         text-decoration: none;
+         font-size: 18px;
+         line-height: 25px;
+         border-radius: 4px;
+         }
+        
+        #navbar_a:hover {
+          background-color: lightgrey;
+        }
+        #navbar a.active {
+          background-color: gold;
+          color: white;
+        }
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div style="background-color: #003366; height: 100px;">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <img src="images/image.png" style="height: 100px;width: 300px; bottom: 20px;" id="logo" id="navbar">
-    <div style="float:right;">
-    <a href="/" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large"> </br></br></br><b>Home</b></a>
-    <a href="/news" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>News</b></a>
-    <a href="/gallery" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>Gallery</b></a>
-    <a href="/opportunities" style="font-family: basic-sans, sans-serif;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></br></br></br><b>Apply</b></a>
-        <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" style="font-family: basic-sans, sans-serif;" title="More"></br></br></br>Hub<i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Members</a>
-        <a href="#" class="w3-bar-item w3-button">Projects</a>
-        <a href="#" class="w3-bar-item w3-button">Apply</a>
-       <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-      </div>
-    </div>
+        #navbar-right {
+         float: right;
+         }
+       
+        .bar {
+         background: rgb(220, 235, 18, 0.7);
+         border-top: 3px solid #ccc;
+         border-bottom: 3px solid #ccc;
+         margin-top: 5.0em;
+         height: 400px;
+         opacity: 0.0;
+         }
 
-    </div>
+         .forumHead {
+         opacity: 0.0;
+         border-top: 3px solid #ccc;
+         border-bottom: 3px solid #ccc;
+         margin-top: 5.0em;
+         }
 
-  </div>
-</div>
+        
+        .about {
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+          color: black;
+        }
+/* the animation */
+       
+        #logo {
+          height: 150px;
+          width: 450px;
+          bottom: 20px;
+          margin-left: 39%;
+          margin-top: -50px;
+          transition: width 1s, height 0.4s, margin 0.6s;
+        }
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium" style="m">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+        #faded {
+          background: rgb(220, 235, 18, 0.7);
+        }
 
 
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">Apply Here</h2>
-    <p class="w3-opacity w3-center"><i>Want to join us? Drop your email!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-row w3-padding-32">
-        <div class="w3-col m6 w3-large w3-margin-bottom">
-          <i class="fa fa-map-marker" style="width:30px"></i> Lewisham, UK<br>
-          <i class="fa fa-envelope" style="width:30px"> </i> Email: creativecodingcollective@gmail.com<br>
-        </div>
-      <div class="w3-col m6">
-        <form action="/forum" method="post">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      
+      </style>
+    </head>
+    <body>
+        <div class="container-fluid" id="navbar">  
+          <div class="row" style="background-color: #003366;" >
+            <div class="col-xs-8" style="background-color:#003366;">
+              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+              <img src="Images/image.png" style="height: 80px;width: 270px;"id="logo">
             </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <div class="col-1 ontop" id="trial">   
+              <a href="index.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Home</b></a>
+            </div>
+            <div class="col-1 ontop" id="trial">   
+              <a href="news.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>News</b></a>
+            </div>
+            <div class="col-1 ontop" id="trial"> 
+              <a href="gallery.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Gallery</b></a>  
+            </div>
+            <div class="col-1 ontop" id="trial">   
+              <a href="forum.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Apply</b></a>
+            </div>
+            <div class="col-1" id="trial">
+               
+            </div>
+            </div>
+          </div>   
+         </div>
+        
+         </div>
+        <div class="container">
+        <div class="row"  id="faded" >
+          <div class="col-sm-12"style="height: 500px; opacity: 0.0;" >
+            <h2 class="ontop about" style="font-size: 35px;"><b></b></h2>
+            <p class="ontop about" style="font-size: 30px;"></p>
+          </div>
+         <div id="contact">
+          <h2 class="w3-wide w3-center" style="color: black; font-family: font-family: basic-sans, sans-serif;">Apply Here</h2>
+          <p class="w3-center" style="color: black; font-family: basic-sans, sans-serif;"><i>Want to join us? Drop your email!</i></p>
+          <div class="w3-row w3-padding-32">
+            <div class="w3-row w3-padding-32">
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                <div style="width: 350px; background-color: gold;">
+                <p style="text-align: center;">Lewisham, UK</p>
+                <p style="text-align: center;">Email: thecreativecodingcollective@gmail.com</p>
+                </div>
+              </div>
+            <div class="w3-col m6">
+              <form action="/forum" method="post">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                  <div class="w3-half">
+                    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                  </div>
+                  <div class="w3-half">
+                    <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                  </div>
+                </div>
+                <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+              </form>
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
-    </div>
-  </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>   
+        </body>
+        <script>
+window.onscroll = function() {scrollFunction()};
 
-<!-- End Page Content -->
-</div>
-
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 4000);
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "5px 5px";
+    document.getElementById("navbar").style.height - "50px"
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("logo").style.marginTop = "-2px"
+    document.getElementById("logo").style.marginLeft = "0%"
+    document.getElementById("logo").style.height = "50px";
+    document.getElementById("logo").style.width = "150px";
   } else {
-    x.className = x.className.replace(" w3-show", "");
+    document.getElementById("navbar").style.padding = "115px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("logo").style.marginTop = "-60px"
+    document.getElementById("logo").style.marginLeft = "38%"
+    document.getElementById("logo").style.height = "150px";
+    document.getElementById("logo").style.width = "450px";
   }
 }
 
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-</body>
-</html>
+        </script>
+        </html>
