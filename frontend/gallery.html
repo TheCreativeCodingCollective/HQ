@@ -2,34 +2,34 @@
   <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
+
     <!--Bootstrap-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="CSS/bootstrap-responsive.css">
     <link rel="stylesheet" href="CSS/bootstrap.css">
-    
+
     <!--Stylesheets-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="navStyle.css">
-    
+
     <!--Icon-->
     <link rel="icon" href="Images/icon.png">
 
     <style>
       #trial:hover {
           background-color: #00004d;
-          
+
       }
       #trial {
           background-color: #003366;
       }
 
-     
+
       .container-fluid{
        padding: 0;
        min-width: 100%;
@@ -55,13 +55,13 @@
        z-index: 999;
        height: 60px;
       }
-   
+
       #navbar #logo {
        font-size: 100px;
        font-weight: bold;
        transition: 0.3s;
       }
-    
+
       #navbar_a {
        float: left;
        color: black;
@@ -74,7 +74,7 @@
        line-height: 25px;
        border-radius: 4px;
        }
-      
+
       #navbar_a:hover {
         background-color: lightgrey;
       }
@@ -86,7 +86,7 @@
       #navbar-right {
        float: right;
        }
-     
+
       .bar {
        background: rgb(220, 235, 18, 0.7);
        border-top: 3px solid #ccc;
@@ -94,14 +94,14 @@
        margin-top: 5.0em;
        }
 
-      
+
       .about {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         color: black;
       }
 /* the animation */
-     
+
       #logo {
         height: 150px;
         width: 450px;
@@ -112,36 +112,36 @@
       }
 
 
-    
+
     </style>
   </head>
   <body>
-        <div class="container-fluid" id="navbar">  
+        <div class="container-fluid" id="navbar">
           <div class="row" style="background-color: #003366;" >
             <div class="col-xs-8" style="background-color:#003366;">
               <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
               <img src="Images/image.png" style="height: 80px;width: 270px;"id="logo">
             </div>
-            <div class="col-1" id="trial">   
-              <a href="index.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Home</b></a>
-            </div>
-            <div class="col-1" id="trial">   
-              <a href="news.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>News</b></a>
-            </div>
-            <div class="col-1" id="trial"> 
-              <a href="gallery.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Gallery</b></a>  
-            </div>
-            <div class="col-1" id="trial">   
-              <a href="forum.html" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Apply</b></a>
+            <div class="col-1" id="trial">
+              <a href="/" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Home</b></a>
             </div>
             <div class="col-1" id="trial">
-               
-             
+              <a href="/news" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>News</b></a>
+            </div>
+            <div class="col-1" id="trial">
+              <a href="/gallery" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Gallery</b></a>
+            </div>
+            <div class="col-1" id="trial">
+              <a href="/forum" style="font-family: basic-sans, sans-serif; color: black; font-size: 14px;" id="navbar_a"></br><b>Apply</b></a>
+            </div>
+            <div class="col-1" id="trial">
+
+
             </div>
             </div>
-          </div>   
+          </div>
          </div>
-        
+
          </div>
        <div class="container-fluid">
               <video playsinline autoplay muted loop poster="Images/profiles.jpg" id="bgvid">
@@ -149,8 +149,8 @@
                 </video>
         </div>
       <div class="container-fluid">
-          <div class="row">                
-           
+          <div class="row">
+
           <div class="col-sm-12 bar">
             <h2 class="ontop about" style="font-size: 34px;"><b>About Us</b></h2>
             <p class="ontop about" style="font-size: 30px;">We are a young group of coders working together, aiming to help unite creatives in our area in collaboration. We were formed by The Albany in Lewisham, but are hoping to expand to many more creatives and coders from all over!</p>
@@ -168,12 +168,12 @@
               <img src="Images/albany.jpg" style="width: 200px; height: 200px;">
               <img src="Images/lewisham.png" style="width: 200px; height: 200px;">
           </div>
-      
+
           <div class="container">
               <img style="width: 100%" src="Images/profiles.jpg">
           </div>
       </div>
-      </div>    
+      </div>
       </body>
       <script>
 window.onscroll = function() {scrollFunction()};
