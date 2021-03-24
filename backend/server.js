@@ -33,7 +33,7 @@ app.route('/forum')
   var user = {name:req.body.Name,
     email:req.body.Email,
     message:req.res.Message}
-    
+
   res.send('submited')
 });;
 
@@ -41,6 +41,12 @@ app.route('/news')
 .get((req, res)=>{
   res.sendFile( path.resolve(frontend + 'news.html') )
 });
+
+app.route('/opportunities')
+.get((req, res)=>{
+  res.sendFile( path.resolve(frontend + 'opportunities.html') )
+});
+
 
 /****** Listening on port ******/
 app.listen(PORT, ()=>{
